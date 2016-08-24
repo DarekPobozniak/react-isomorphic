@@ -1,7 +1,7 @@
 {
   "name": "react-isomorphic",
   "version": "1.0.0",
-  "description": "",
+  "description": "React.js &amp; Node.js - javascript that run on client-side and server-side",
   "main": "./src/clientRender.js",
   "scripts": {
     "build": "echo '=> building' && babel src -d dist && NODE_ENV=production webpack --progress",
@@ -30,5 +30,13 @@
     "babel-preset-react": "^6.11.1",
     "nodemon": "^1.10.2",
     "webpack": "^1.13.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarekPobozniak/react-isomorphic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DarekPobozniak/react-isomorphic/issues"
+  },
+  "homepage": "https://github.com/DarekPobozniak/react-isomorphic#readme"
 }
