@@ -8,12 +8,23 @@ cd react-isomorphic
 npm install
 ```
 
+### Launching
 #### Development
 ```bash
 npm run watch
+```
+If you want to change port
+```bash
+PORT=3004 npm run watch
 ```
 
 #### Production
 ```bash
 npm run serve
 ```
+If you want to change port:
+```bash
+PORT=3004 npm run serve
+```
+
+Open your brower at `http://localhost:<PORT || 3003>`
