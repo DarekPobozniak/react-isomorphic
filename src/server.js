@@ -5,17 +5,15 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 
-import routes from './src/routes';
+import routes from './routes';
 
 const app = express();
 
 app.use(express.static('public'));
 
-app.set('views', __dirname + '/src/views');
 app.set('view engine', 'ejs');
 
 app.get('*', (req, res) => {
-  // res.render('index');
   match({ routes, location: req.url }, (err, redirectLocation, props) => {
     if (err) {
       // something went badly wrong, so 500 with a message
@@ -38,7 +36,11 @@ app.get('*', (req, res) => {
 
 const server = http.createServer(app);
 
-server.listen(3003);
-server.on('listening', () => {
-  console.log('Listening on 3003');
+app.listen(3003, 'localhost', function(err) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  console.log('Listening at http://localhost:3003');
 });
